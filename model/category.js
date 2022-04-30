@@ -6,6 +6,10 @@ const categorySchema = new schema({
         type: Number,
         required: true
     },
+    slug: {
+        type: String,
+        required: true
+    },
     title: {
         type: String,
         required: true

@@ -68,6 +68,7 @@ module.exports.addProduct = (req, res) => {
 			const product = {
 				id: productCount + 1,
 				title: req.body.title,
+				slug: req.body.slug,
 				price: req.body.price,
 				description: req.body.description,
 				image: req.body.image,
@@ -92,6 +93,7 @@ module.exports.editProduct = (req, res) => {
 			id,
 		}).then(product => {
 			product.title = req.body.title
+			product.slug = req.body.slug
 			product.price = req.body.price
 			product.description = req.body.description
 			product.image = req.body.image

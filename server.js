@@ -20,6 +20,7 @@ const port = process.env.PORT || 6400;
 
 //routes
 const productRoute = require('./routes/product');
+const categoryRoute = require('./routes/category');
 const homeRoute = require('./routes/home');
 const cartRoute = require('./routes/cart');
 const userRoute = require('./routes/user');
@@ -40,6 +41,7 @@ app.disable('view cache');
 
 app.use('/', homeRoute);
 app.use('/products', productRoute);
+app.use('/category', categoryRoute);
 app.use('/carts', cartRoute);
 app.use('/users', userRoute);
 app.use('/auth', authRoute);
